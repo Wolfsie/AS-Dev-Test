@@ -1,0 +1,14 @@
+// bower:scss
+// endbower
+
+body {
+	background: #040404; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(#595959, #040404); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#595959, #040404); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#595959, #040404); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#595959, #040404); /* Standard syntax */
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #999;
+}
+
+
