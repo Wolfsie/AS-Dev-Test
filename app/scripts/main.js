@@ -1,7 +1,6 @@
 'use strict';
 
 function convertTime (time) {
-	console.log(time);
 	var seconds = Math.floor((new Date() - time) / 1000);
 	var intervals = [
 		{
@@ -40,12 +39,10 @@ function convertTime (time) {
 }
 
 function buildPage (data) {
-	console.log('building');
 	// TODO Create Grid Section Item Here
 	//Create each article item and append to grid
 	$('body').prepend('<section class="grid"></section>');
 	data.forEach(function (item) {
-		console.log(item);
 		var postedTime = convertTime(parseInt(item.updated));
 		var boxClass = item.type === 'video' ? 'video' : 'article';
 		var boxContent = '<article class="' + boxClass + '" style="background: url(' + item.thumbnail.url + ') center no-repeat; background-size: cover;">' + 
@@ -60,7 +57,6 @@ function LoadAssets() {
 	$.ajax({
 		url: 'scripts/data.json',
 		success: function(data) {
-			console.log(data);
 			buildPage(data);
 		}
 	});
